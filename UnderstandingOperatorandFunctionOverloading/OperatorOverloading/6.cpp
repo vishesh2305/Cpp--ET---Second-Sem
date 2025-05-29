@@ -47,11 +47,10 @@ int main(){
 
     const CustomArray customarr = arr;
 
-    cout << customarr[1];
+    cout << customarr[0]<<endl;
 
     arr[5] = 100;
-    cout << customarr[5];
+    cout << customarr[5]<<endl;
 
     return 0;
-
-}
+};
