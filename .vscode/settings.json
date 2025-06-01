@@ -10,6 +10,10 @@
         "charconv": "cpp",
         "xmemory": "cpp",
         "algorithm": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "vector": "cpp",
+        "thread": "cpp",
+        "istream": "cpp",
+        "string": "cpp"
     }
 }

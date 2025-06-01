@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 // Polymorphism in Game Development (Entity System):
@@ -9,13 +10,15 @@ using namespace std;
 class GameEntity{
     public:
     virtual void update() = 0;
+
+    virtual ~GameEntity(){};
 };
 
 class Player : public GameEntity{
     public:
-    void update(){
+    void update() override{
         cout << "Player Moving\n";
-    }
+    };
 };
 class Enemy : public GameEntity{
     public:
@@ -25,14 +28,31 @@ class Enemy : public GameEntity{
 };
 class Projectile : public GameEntity{
     public:
-    void update(){
+    void update() override{
         cout << "Projectile Flying\n";
     }
 };
 
 
 int main(){
-    GameEntity* g1;
-    g1->update();
+    vector<GameEntity*> entities;
+    entities.push_back(new Player());
+    entities.push_back(new Enemy());
+    entities.push_back(new Projectile());
 
-}
+
+
+    for(int i=0; i < 3; i++){
+        for(GameEntity* entity:entities){
+            entity->update();
+        }
+        cout << endl;
+    };
+
+
+    for(GameEntity* entity: entities){
+        delete entity;
+    };
+
+    return 0;
+};

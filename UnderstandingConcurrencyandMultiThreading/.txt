@@ -1,0 +1,17 @@
+// INTRODUCTION TO CONCURRENT SYSTEMS AND MULTITHREADING
+// Concurrent system refers to systems where multiple tasks or computations appear to happen at the same time. 
+
+
+
+// Multithreading: 
+// It is a specific way to acheieve concurrency within a single program. Imagine that a single program is our chef , 
+// Multithreading will allows the chef to have multiple hands , each capable of working on a part of a atask or different tasks independently but concurrently.
+
+
+
+// Concurrency vs. Parallelism
+// COncurrency is about dealing with multiple things at once. It can lead to Parallelism but doesn't have to. Think of one person juggling multiple balls.
+
+// Parallelism is about doing multiple things at once , This requires hardware with multiple processing units. Thinks of multiple people juggling their own set of balls simultaneously. Multithreading on a multi core processor can achieve true parallelism.
+
+
